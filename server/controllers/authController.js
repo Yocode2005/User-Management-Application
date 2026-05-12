@@ -142,7 +142,7 @@ exports.forgotPassword = async (req, res) => {
 };
 
 // ── Reset password ────────────────────────────────────
-exports.resetPassword = async (req, res) => {
+exports.resetPassword = async (req, res) => { // function to handle password reset using token
   const { token } = req.query;
   const { password } = req.body;
   if (!token) throw new ApiError(400, "Reset token is missing.");
