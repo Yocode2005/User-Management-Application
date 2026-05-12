@@ -1,5 +1,5 @@
 const crypto = require("crypto"); // For secure token generation and hashing
-const User = require("../models/User");
+const User = require("../models/User"); // User model with fields for email verification and password reset
 const { ApiError, ApiResponse } = require("../utils/ApiError");
 const {
   generateAccessToken,
