@@ -29,7 +29,7 @@ exports.register = async (req, res) => {
   const hashedToken = hashToken(rawToken);
   const expires = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24h
 
-  const user = await User.create({
+  const user = await User.create({ // create user with email verification fields
     username,
     email,
     password,
