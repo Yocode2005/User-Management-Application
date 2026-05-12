@@ -1,4 +1,4 @@
-const crypto = require("crypto");
+const crypto = require("crypto"); // For secure token generation and hashing
 const User = require("../models/User");
 const { ApiError, ApiResponse } = require("../utils/ApiError");
 const {
