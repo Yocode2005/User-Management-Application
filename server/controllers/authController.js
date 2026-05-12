@@ -11,7 +11,7 @@ const {
 } = require("../utils/generateTokens");
 const { sendWelcomeEmail, sendPasswordResetEmail } = require("../services/emailService");
 const { createAuditLog } = require("../services/auditService");
-const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken"); // For verifying refresh tokens
 
 // ── Register ──────────────────────────────────────────
 exports.register = async (req, res) => {
