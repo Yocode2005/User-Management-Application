@@ -9,7 +9,7 @@ exports.getMyProfile = async (req, res) => {
 };
 
 // ── PUT /api/profile/me ────────────────────────────────
-exports.updateMyProfile = async (req, res) => {
+exports.updateMyProfile = async (req, res) => { // function to update allowed profile fields
   const ALLOWED = [
     "fullName", "phone", "dob", "gender", "bio",
     "occupation", "company", "address", "socialLinks",
