@@ -122,7 +122,7 @@ exports.updateUser = async (req, res) => { // function to update allowed user fi
 };
 
 // ── PATCH /api/users/:id/status — change status ───────
-exports.updateUserStatus = async (req, res) => {
+exports.updateUserStatus = async (req, res) => { // function to change user status with checks to prevent self-banning and to log the action, plus email notification to the user about the status change
   const { status } = req.body;
   const VALID = ["active", "inactive", "banned"];
   if (!VALID.includes(status)) throw new ApiError(400, `Status must be one of: ${VALID.join(", ")}`);
