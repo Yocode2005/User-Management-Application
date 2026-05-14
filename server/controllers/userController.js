@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../models/User"); // import User model
 const { ApiError, ApiResponse } = require("../utils/ApiError");
 const { uploadToCloudinary, deleteFromCloudinary } = require("../config/cloudinary");
 const { createAuditLog } = require("../services/auditService");
