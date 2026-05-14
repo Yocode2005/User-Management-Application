@@ -132,7 +132,7 @@ exports.updateUserStatus = async (req, res) => { // function to change user stat
     throw new ApiError(403, "You cannot ban yourself.");
   }
 
-  const user = await User.findByIdAndUpdate(req.params.id, { status }, { new: true });
+  const user = await User.findByIdAndUpdate(req.params.id, { status }, { new: true }); // for finding user
   if (!user) throw new ApiError(404, "User not found.");
 
   const actionMap = { banned: "USER_BANNED", active: "USER_ACTIVATED", inactive: "USER_DEACTIVATED" };
