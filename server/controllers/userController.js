@@ -5,7 +5,7 @@ const { createAuditLog } = require("../services/auditService");
 const { sendStatusChangeEmail } = require("../services/emailService");
 
 // ── Helper: build query filters ───────────────────────
-const buildUserFilter = (query) => {
+const buildUserFilter = (query) => { // function to build MongoDB filter object based on query parameters
   const filter = {};
   if (query.status) filter.status = query.status;
   if (query.role) filter.role = query.role;
