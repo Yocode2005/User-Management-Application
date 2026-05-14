@@ -151,7 +151,7 @@ exports.updateUserStatus = async (req, res) => { // function to change user stat
 };
 
 // ── PATCH /api/users/:id/role — change role ───────────
-exports.updateUserRole = async (req, res) => {
+exports.updateUserRole = async (req, res) => { // for role update
   const { role } = req.body;
   const VALID = ["user", "admin", "moderator"];
   if (!VALID.includes(role)) throw new ApiError(400, `Role must be one of: ${VALID.join(", ")}`);
