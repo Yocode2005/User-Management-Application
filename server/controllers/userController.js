@@ -88,7 +88,7 @@ exports.createUser = async (req, res) => {
 };
 
 // ── PUT /api/users/:id — update user ──────────────────
-exports.updateUser = async (req, res) => {
+exports.updateUser = async (req, res) => { // function to update allowed user fields, with extra checks for admin-only fields
   const ALLOWED = [
     "fullName", "username", "email", "phone", "dob", "gender",
     "occupation", "company", "bio", "address", "socialLinks",
