@@ -65,7 +65,7 @@ exports.createUser = async (req, res) => {
     throw new ApiError(409, `${field} already exists.`);
   }
 
-  const user = await User.create({
+  const user = await User.create({ // for user creation by admin
     username, email, password, fullName,
     role: role || "user",
     status: status || "active",
