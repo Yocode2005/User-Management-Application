@@ -1,5 +1,5 @@
 const User = require("../models/User"); // import User model
-const { ApiError, ApiResponse } = require("../utils/ApiError");
+const { ApiError, ApiResponse } = require("../utils/ApiError"); // important utils for consistent API responses and error handling
 const { uploadToCloudinary, deleteFromCloudinary } = require("../config/cloudinary");
 const { createAuditLog } = require("../services/auditService");
 const { sendStatusChangeEmail } = require("../services/emailService");
