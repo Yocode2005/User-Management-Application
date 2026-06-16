@@ -32,7 +32,7 @@ app.use(
   cors({
    origin: [
       "http://localhost:3000",
-      "https://user-management-application-nine-beige.vercel.app/"
+      "https://user-management-application-nine-beige.vercel.app"
     ],
     credentials: true, // needed for cookies (refresh token)
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
