@@ -30,7 +30,10 @@ app.use(helmet());
 // CORS — allow requests from React dev server
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+   origin: [
+      "http://localhost:3000",
+      "https://user-management-application-nine-beige.vercel.app/"
+    ],
     credentials: true, // needed for cookies (refresh token)
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
